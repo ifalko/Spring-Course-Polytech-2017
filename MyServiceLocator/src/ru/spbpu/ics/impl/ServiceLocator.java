@@ -19,12 +19,6 @@ public class ServiceLocator {
 		System.out.println("Init");
 	}
 	
-	static{
-		System.out.println("static");
-	}
-
-	
-	
 	public Service getServiceByName(String service){
 		return locator.get(service);
 	}
