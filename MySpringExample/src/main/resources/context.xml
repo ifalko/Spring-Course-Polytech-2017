@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="imac" class="ru.spbpu.ics.impls.IMac">
+	<constructor-arg name="box" ref="imacBox"/>
+	<constructor-arg name="cpu" ref="imacCpu"/>
+	<constructor-arg name="display" ref="imacDisplay"/>
+	</bean>
+	
+	<bean id="imac2" class="ru.spbpu.ics.impls.IMac">
+	<constructor-arg name="box" ref="imacBox"/>
+	<constructor-arg name="cpu" ref="imacCpu"/>
+	<constructor-arg name="display" ref="imacDisplay4K"/>
+	</bean>
+	
+	<bean id="imacDisplay" class="ru.spbpu.ics.impls.Display"></bean>
+	<bean id="imacCpu" class="ru.spbpu.ics.impls.Cpu"></bean>
+	<bean id="imacBox" class="ru.spbpu.ics.impls.Box"></bean>
+	<bean id="imacDisplay4K" class="ru.spbpu.ics.impls.Display4K"></bean>
+
+
+</beans>
