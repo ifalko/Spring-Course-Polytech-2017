@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- <bean id="conveyorXML" class="ru.spbpu.ics.impls.Conveyor" scope="singleton">
+		<property name="admins">
+			<list>
+				<value>alexey@gmail.org</value>
+				<value>anton@gmail.org</value>
+				<value>maxim@gmail.org</value>
+			</list>
+		</property>
+
+		<lookup-method name="createIMac" bean="imacTop" />
+		<lookup-method name="createIMacTop" bean="imacCustom" /> 
+	</bean> -->
+
+	<bean id="imac" class="ru.spbpu.ics.impls.IMac" scope="prototype">
+		<constructor-arg name="box" ref="imacBox" />
+		<constructor-arg name="cpu" ref="imacCpuI5" />
+		<constructor-arg name="display" ref="imacDisplay" />
+	</bean>
+
+	<bean id="imacTop" class="ru.spbpu.ics.impls.IMac" scope="prototype">
+		<constructor-arg name="box" ref="imacBox" />
+		<constructor-arg name="cpu" ref="imacCpuI5" />
+		<constructor-arg name="display" ref="imacDisplay4K"/>
+	</bean>
+
+	<bean id="imacCustom" class="ru.spbpu.ics.impls.IMac">
+		<constructor-arg name="box" ref="imacBox" />
+		<constructor-arg name="cpu">
+			<bean class="ru.spbpu.ics.impls.Cpu">
+				<constructor-arg name="cache" ref="4Mb" />
+				<constructor-arg name="core" ref="i5" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg name="display">
+			<bean class="ru.spbpu.ics.impls.Display">
+				<constructor-arg name="matrix" ref="ips" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="imacCpuI5" class="ru.spbpu.ics.impls.Cpu">
+		<constructor-arg name="cache" ref="4Mb" />
+		<constructor-arg name="core" ref="i5" />
+	</bean>
+
+	<bean id="imacCpuI7" class="ru.spbpu.ics.impls.Cpu">
+		<constructor-arg name="cache" ref="6Mb" />
+		<constructor-arg name="core" ref="i7" />
+	</bean>
+
+	<bean id="i5" class="ru.spbpu.ics.impls.CoreI5"></bean>
+	<bean id="4Mb" class="ru.spbpu.ics.impls.Cache4Mb"></bean>
+
+	<bean id="i7" class="ru.spbpu.ics.impls.CoreI7"></bean>
+	<bean id="6Mb" class="ru.spbpu.ics.impls.Cache6Mb"></bean>
+
+
+	<bean id="imacDisplay4K" class="ru.spbpu.ics.impls.Display">
+		<constructor-arg name="matrix" ref="ips" />
+	</bean>
+	<bean id="imacDisplay" class="ru.spbpu.ics.impls.Display">
+		<constructor-arg name="matrix" ref="tn" />
+	</bean>
+	<bean id="tn" class="ru.spbpu.ics.impls.TNFilm" scope="prototype"></bean>
+	<bean id="ips" class="ru.spbpu.ics.impls.IPS"></bean>
+	
+	<bean id="imacBox" class="ru.spbpu.ics.impls.Box"></bean>
+
+</beans>
