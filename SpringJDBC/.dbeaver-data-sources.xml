@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="sqlite_jdbc-15b4ee467cf-23b61791ff671636" provider="generic" driver="sqlite_jdbc" name="SQLite - SpringDB.db" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="/Users/falko/dev/workspace/DataSource/db/SpringDB.db" url="jdbc:sqlite:/Users/falko/dev/workspace/DataSource/db/SpringDB.db" type="dev"/>
+	</data-source>
+	<data-source id="sqlite_jdbc-15b4ee756f1-44ce70e978c13aa2" provider="generic" driver="sqlite_jdbc" name="SQLite - SpringDB.db" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="/Users/falko/dev/workspace/DataSource/db/SpringDB.db" url="jdbc:sqlite:/Users/falko/dev/workspace/DataSource/db/SpringDB.db" type="dev"/>
+	</data-source>
+	<data-source id="sqlite_jdbc-15b4eecd183-666937c0c464102a" provider="generic" driver="sqlite_jdbc" name="SQLite - SpringDB.db" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="/Users/falko/dev/workspace/DataSource/db/SpringDB.db" url="jdbc:sqlite:/Users/falko/dev/workspace/DataSource/db/SpringDB.db" type="dev"/>
+	</data-source>
+	<data-source id="sqlite_jdbc-15b4eef3e1e-1022fbde3b368169" provider="generic" driver="sqlite_jdbc" name="SQLite - SpringDB.db" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="/Users/falko/dev/workspace/DataSource/db/SpringDB.db" url="jdbc:sqlite:/Users/falko/dev/workspace/DataSource/db/SpringDB.db" type="dev"/>
+	</data-source>
+	<data-source id="sqlite_jdbc-15b4ef5ca82-13c83d67eee4c981" provider="generic" driver="sqlite_jdbc" name="SQLite - SpringDB.db" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="/Users/falko/dev/workspace/DataSource/db/SpringDB.db" url="jdbc:sqlite:/Users/falko/dev/workspace/DataSource/db/SpringDB.db" type="dev"/>
+	</data-source>
+	<data-source id="sqlite_jdbc-15b4ef91a24-50694c10bfe573d6" provider="generic" driver="sqlite_jdbc" name="SQLite - {file}" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="" url="jdbc:sqlite:{file}" type="dev"/>
+	</data-source>
+</data-sources>
