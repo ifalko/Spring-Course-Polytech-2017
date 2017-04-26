@@ -33,14 +33,9 @@ public class Main {
 		
 //		sqLite.updateByID(4, p1);
 		
-		Consumer<Person> consumer = new Consumer<Person>() {
-			@Override
-			public void accept(Person p) {
-				System.out.println(p.getFirstName() + " | " 
+		Consumer<Person> consumer = p -> System.out.println(p.getFirstName()+ " | " 
 									+ p.getLastName() + " | " 
 									+ p.getAge());
-			}
-		};
 		
 		sqLite.findAll().forEach(consumer);
 		
